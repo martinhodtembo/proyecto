@@ -1,0 +1,19 @@
+galaxy_info:
+  author: Antonio Barbaro
+  description: Install docker ce
+  license: BSD
+
+  min_ansible_version: 1.9
+
+  platforms:
+  - name: EL
+    versions:
+    - 7
+
+
+  galaxy_tags: 
+    - docker
+    - community edition
+    - ce
+
+dependencies: []

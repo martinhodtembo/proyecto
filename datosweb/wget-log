@@ -1,0 +1,15 @@
+--2021-12-17 15:03:00--  https://www.google.com/imgres?imgurl=https%3A%2F%2Fw7.pngwing.com%2Fpngs%2F352%2F457%2Fpng-transparent-logo-organization-brand-infojobs-others-blue-text-logo.png
+Resolving www.google.com (www.google.com)... 142.250.141.147, 142.250.141.106, 142.250.141.99, ...
+Connecting to www.google.com (www.google.com)|142.250.141.147|:443... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://www.google.com/imghp [following]
+--2021-12-17 15:03:01--  https://www.google.com/imghp
+Reusing existing connection to www.google.com:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘imgres?imgurl=https:%2F%2Fw7.pngwing.com%2Fpngs%2F352%2F457%2Fpng-transparent-logo-organization-brand-infojobs-others-blue-text-logo.png’
+
+              imgres?imgurl=     [<=>                                           ]       0  --.-KB/s               imgres?imgurl=https:%2F%2Fw7     [ <=>                                          ]  13.61K  --.-KB/s    in 0s      
+
+2021-12-17 15:03:01 (68.1 MB/s) - ‘imgres?imgurl=https:%2F%2Fw7.pngwing.com%2Fpngs%2F352%2F457%2Fpng-transparent-logo-organization-brand-infojobs-others-blue-text-logo.png’ saved [13939]
+

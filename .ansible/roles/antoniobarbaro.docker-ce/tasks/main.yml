@@ -1,0 +1,37 @@
+---
+# tasks for docker ce
+- name: remove old docker packages
+  yum: state=absent name={{ item }}
+  with_items:
+    - docker
+    - docker-common
+    - container-selinux
+    - docker-selinux
+    - docker-engine
+
+
+- name: install yum-utils
+  yum: 
+    state: latest 
+    name: yum-utils
+
+#- name: add docker ce repository
+#  yum_repository:
+#    name: docker-ce
+#    description: docker community edition
+#    baseurl: https://download.docker.com/linux/centos/docker-ce.repo
+
+- name: add docker ce repository
+  command: yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+
+- name: install docker-ce
+  yum:
+    name: docker-ce
+    state: latest 
+    update_cache: yes
+
+- name: enable and start docker service
+  systemd:
+    name: docker
+    state: started
+    enabled: yes
