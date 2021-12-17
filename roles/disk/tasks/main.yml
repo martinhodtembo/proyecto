@@ -1,0 +1,33 @@
+---
+- name: crear una nueva particion primario lvm 
+  parted:
+    device: /dev/sdb
+    label: gpt
+    part_type: primary
+    number: 1
+    state: present
+
+- name: crear un nuevo vg /dev/sdb
+  lvg:
+    vg: dock-vg
+    pvs: /dev/sdb1
+
+- name: crear un nuevo lv para docker-vg
+  lvol:
+    vg: dock-vg
+    lv: docker
+    size: 100%FREE
+    shrink: no
+      
+- name: crea un nuevo filesystem ext4 para lv centos
+  filesystem:  
+    fstype: ext4
+    dev: /dev/dock-vg/dock
+    opts: -cc
+
+- name: mounts lv docker to /var/lib/docker
+  mount:
+    src: /dev/dock-vg/dock
+    path: /var/lib/docker
+    state: mounted
+    fstype: ext4
